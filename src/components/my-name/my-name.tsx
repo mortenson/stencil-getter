@@ -1,4 +1,4 @@
-import { Component, Prop } from '@stencil/core';
+import { Component, Prop, Method } from '@stencil/core';
 
 @Component({
   tag: 'my-name',
@@ -8,6 +8,11 @@ export class MyName {
 
   @Prop() first: string;
   @Prop() last: string;
+
+  @Method()
+  get value() {
+    return Math.random();
+  }
 
   render() {
     return (
